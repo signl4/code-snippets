@@ -1,6 +1,6 @@
 <?php
 
-// Send SIGNL4 alert from Node.js
+// Send SIGNL4 alert from PHP
 
 // Your SIGNL4 team secret
 $teamSecret = '<team-secret>';
