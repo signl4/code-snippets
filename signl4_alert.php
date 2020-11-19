@@ -3,7 +3,7 @@
 // Send SIGNL4 alert from PHP
 
 // Your SIGNL4 team secret
-$teamSecret = '<team-secret>';
+$teamSecret = 'team-secret';
 
 $url = 'https://connect.signl4.com/webhook/' . $teamSecret;
  

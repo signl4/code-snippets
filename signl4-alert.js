@@ -2,7 +2,7 @@
 // Send SIGNL4 alert from Node.js
 
 // Your SIGNL4 team secret
-const teamSecret = '<team-secret>'
+const teamSecret = 'team-secret'
 
 const https = require('https')
 

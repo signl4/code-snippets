@@ -11,7 +11,7 @@ import (
 
 func main() {
 	// Your SIGNL4 team secret
-	teamSecret := "<team-secret>"
+	teamSecret := "team-secret"
 	url := "https://connect.signl4.com/webhook/" + teamSecret
 
 	// Alert data

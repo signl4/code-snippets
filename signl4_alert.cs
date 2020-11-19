@@ -6,7 +6,7 @@ using System.Text;
 // Send SIGNL4 alert from C#
 
 // Your SIGNL4 team secret
-string teamSecret = "<team-secret>";
+string teamSecret = "team-secret";
 
 // Alert data
 string json = @"{  

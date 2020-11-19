@@ -5,7 +5,7 @@
 import requests
 
 # Your SIGNL4 team secret
-teamSecret = '<team-secret>'
+teamSecret = 'team-secret'
 
 # SIGNL4 webhook URL
 webhook_url = 'https://connect.signl4.com/webhook/' + teamSecret
