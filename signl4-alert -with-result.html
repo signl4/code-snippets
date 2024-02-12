@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGNL4 Alert</title>
+    <script>
+        
+        // Use your SIGNL4 webhook URL including team or integration secret here
+        var strWebhookUrl = "https://connect.signl4.com/webhook/<signl4-integration-secret>";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // When the DOM is fully loaded, add an event listener to the form
+            document.getElementById("messageForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting the traditional way
+
+                // Gather the form data
+                var formData = new FormData(this);
+
+                // Create an XMLHttpRequest to submit the form data
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", strWebhookUrl, true);
+
+                xhr.onload = function() {
+                    if ((this.status >= 200) && (this.status <= 299)) {
+                        // Display the response from the server in the result div
+                        document.getElementById("result").innerHTML = "Alert sent successfully. Event ID: " + JSON.parse(this.responseText).eventId + ".";
+                    } else {
+                        // Handle error
+                        document.getElementById("result").innerHTML = "An error occurred (" + this.status + ").";
+                    }
+                };
+
+                // Send the form data
+                xhr.send(formData);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h2>Send alert to your SIGNL4 team</h2>
+
+    <form id="messageForm">
+        <input type="hidden" id="title" name="title" value="SIGNL4 Web Alert"></textarea><br>
+
+        <label for="message">Alert message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        
+        <input type="submit" value="Send SIGNL4 Alert">
+    </form>
+
+    <!-- Div to display the server's response -->
+    <div id="result"></div>
+
+</body>
+</html>
