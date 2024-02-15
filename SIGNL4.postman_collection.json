@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "4f641aab-4105-432c-9077-657d88d40e93",
+		"name": "SIGNL4",
+		"description": "Send mobile alerts using SIGNL4.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20074946"
+	},
+	"item": [
+		{
+			"name": "SIGNL4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\": \" Alert from Postman\",\r\n    \"Message\": \"Hello world.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://connect.signl4.com/webhook/--team-secret--",
+					"protocol": "https",
+					"host": [
+						"connect",
+						"signl4",
+						"com"
+					],
+					"path": [
+						"webhook",
+						"vbguzfsi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
