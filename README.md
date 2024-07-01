@@ -17,3 +17,4 @@ The code smippets include:
 - Flutter / Dart
 - HTML
 - Postman
+- Rust
