@@ -10,8 +10,8 @@ use serde_json::json;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    // The SIGNL4 webhook URL
-    let url = "https://connect.signl4.com/webhook/vbguzfsi";
+    // Your SIGNL4 webhook URL
+    let url = "https://connect.signl4.com/webhook/{team-secret}";
 
     // Create a JSON object
     let request = json!({
