@@ -18,3 +18,4 @@ The code smippets include:
 - HTML
 - Postman
 - Rust
+- Visual Basic for Applications (VBA)
